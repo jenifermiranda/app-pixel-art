@@ -17,5 +17,21 @@ body {
     justify-content: space-around;
     align-items: center;
     display: inline-flex;
+    margin-bottom: 20px;
+}
 
+#pixel-board {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+
+
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    display: inline-flex;
+    background-color: rgb(255, 255, 255);
 }
