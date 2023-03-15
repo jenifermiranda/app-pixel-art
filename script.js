@@ -82,9 +82,17 @@ window.onload = () => {
           quadrado[index].addEventListener('click', (event) => {
             const colorSelect = document.querySelector('.selected');
                 event.target.style.backgroundColor = colorSelect.style.backgroundColor;
-                console.log(event.target.style.backgroundColor);
         })
       }
+
+      //botao limpa
+      const clearButton = document.getElementById('clear-board');
+      clearButton.addEventListener('click', (event) => {
+        const quadrado = document.getElementsByClassName('pixel');
+          for (let index = 0; index < quadrado.length; index += 1) {
+            quadrado[index].style.background = 'rgb (255, 255, 255)';
+          }
+      })
 
 
 }

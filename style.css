@@ -11,18 +11,6 @@ body {
 
 }
 
-#dois {
-  background-color: rgb(255, 255, 254);
-}
-
-#tres {
-  background-color: rgb(255, 254, 255);
-}
-
-#quatro {
-  background-color: rgb(254, 255, 255);
-}
-
 #button-random-color {
   width: 120px;
   height: 30px;
