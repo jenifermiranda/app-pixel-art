@@ -58,7 +58,7 @@ window.onload = () => {
     }
     createPixel();
 
-    //seleciona cor preta
+    //seleciona cor preta e tira o select
     const color = document.getElementsByClassName('color');
     const black = document.getElementsByClassName('color')[0];
     black.classList.add('selected');
