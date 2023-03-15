@@ -3,47 +3,48 @@ body {
 }
 
 .color {
-    width: 40px;
-    height: 40px;
-    border: solid black 1px;
-    margin: 3px;
-    display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  margin: 3px;
+  display: inline-flex;
 
 }
 
 #dois {
-    background-color: rgb(255, 255, 254);
+  background-color: rgb(255, 255, 254);
 }
 
 #tres {
-    background-color: rgb(255, 254, 255);
+  background-color: rgb(255, 254, 255);
 }
 
 #quatro {
-    background-color: rgb(254, 255, 255);
+  background-color: rgb(254, 255, 255);
 }
 #button-random-color {
-    width: 120px;
-    height: 30px;
-    border: solid black 1px;
-    justify-content: space-around;
-    align-items: center;
-    display: inline-flex;
-    margin-bottom: 20px;
+  width: 120px;
+  height: 30px;
+  border: solid black 1px;
+  justify-content: space-around;
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 20px;
 }
 
 #pixel-board {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(5, 40px);
-
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  justify-content: center;
 
 }
 
 .pixel {
-    width: 40px;
-    height: 40px;
-    border: solid black 1px;
-    display: inline-flex;
-    background-color: white;
+
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  display: inline-flex;
+  background-color: white;
 }

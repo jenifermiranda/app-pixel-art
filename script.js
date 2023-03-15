@@ -73,9 +73,16 @@ window.onload = () => {
         })
       }
 
+      //pinta quadrado
+      const quadrado = document.getElementsByClassName('pixel');
 
-
-
+      for (let index = 0; index < quadrado.length; index += 1) {
+        quadrado[index].addEventListener('click', (event) => {
+            const colorSelect = document.querySelector('.selected');
+                event.target.style.background = colorSelect.style.backgroundColor;
+    
+        })
+      }
 
 
 }
