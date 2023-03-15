@@ -58,5 +58,24 @@ window.onload = () => {
     }
     createPixel();
 
+    //seleciona cor preta
+    const color = document.getElementsByClassName('color');
+    const black = document.getElementsByClassName('color')[0];
+    black.classList.add('selected');
+
+    for (let index = 0; index < color.length; index += 1) {
+        color[index].addEventListener('click', (event) => {
+            const colorSelect = document.querySelector('.selected');
+          if (colorSelect) {
+            colorSelect.classList.remove('selected');
+          }
+          event.target.classList.add('selected');
+        })
+      }
+
+
+
+
+
 
 }
