@@ -21,7 +21,6 @@ window.onload = () => {
     //aplica cores na paleta
     function geraCores() {
         let arrayColor = [];
-        let qualACor = '';
         for (let index = 1; index < colorPalet.length; index += 1) {
             // compara cores
             for (let compare = 1; compare < colorPalet.length; compare += 1) {
@@ -29,15 +28,22 @@ window.onload = () => {
                     colorPalet[index].style.backgroundColor = rgbRandom();
                 }
             }
+
+            arrayColor.push(colorPalet[index].style.backgroundColor);
         }
-        qualACor += colorPalet[index].style.backgroundColor;
-        arrayColor.push(qualACor);
-        localStorage.setItem('corGerada', JSON.stringify(arrayColor));
+        localStorage.setItem('colorPalette', JSON.stringify(arrayColor));
+    }
+    if (localStorage.getItem('colorPalette') !== null) {
+        const recuperaCor = JSON.parse(localStorage.getItem('colorPalette'));
+
+        for (let index = 0; index < recuperaCor.length; index += 1) {
+            colorPalet[index + 1].style.backgroundColor = recuperaCor[index];
+        }
     }
 
     //quadrado preto
     const blackColor = document.getElementsByClassName('color')[0];
-    blackColor.style.backgroundColor = 'black';
+    blackColor.style.backgroundColor = 'rgb(0, 0, 0)';
 
 
     //quadrado 5x5
