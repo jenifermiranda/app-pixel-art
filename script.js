@@ -1,5 +1,12 @@
 window.onload = () => {
     const colorPalet = document.getElementById('color-palette').children;
+    const corDois = document.getElementById('dois');
+    const corTres = document.getElementById('tres');
+    const corQuatro = document.getElementById('quatro');
+
+    corDois.style.backgroundColor = 'rgb(255, 255, 254)';
+    corTres.style.backgroundColor = 'rgb(255, 254, 255)';
+    corQuatro.style.backgroundColor = 'rgb(254, 255, 255)';
 
     //gerado de cor
     const rgbRandom = () => {
@@ -18,7 +25,7 @@ window.onload = () => {
     })
 
     //gera as cores pela primeira vez
-    geraCores();
+    // geraCores();
 
     //aplica cores na paleta
     function geraCores() {
