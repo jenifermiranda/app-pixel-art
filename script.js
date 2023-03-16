@@ -1,6 +1,6 @@
 window.onload = () => {
     const colorPalet = document.getElementById('color-palette').children;
-    
+
     //gerado de cor
     const rgbRandom = () => {
 
@@ -33,6 +33,7 @@ window.onload = () => {
 
             arrayColor.push(colorPalet[index].style.backgroundColor);
         }
+        console.log(arrayColor)
         localStorage.setItem('colorPalette', JSON.stringify(arrayColor));
     }
     if (localStorage.getItem('colorPalette') !== null) {
@@ -68,31 +69,34 @@ window.onload = () => {
     for (let index = 0; index < color.length; index += 1) {
         color[index].addEventListener('click', (event) => {
             const colorSelect = document.querySelector('.selected');
-          if (colorSelect) {
-            colorSelect.classList.remove('selected');
-          }
-          event.target.classList.add('selected');
+            if (colorSelect) {
+                colorSelect.classList.remove('selected');
+            }
+            event.target.classList.add('selected');
         })
-      }
+    }
 
-      //pinta quadrado
-      const quadrado = document.getElementsByClassName('pixel');
-    
-      for (let index = 0; index < quadrado.length; index += 1) {
-          quadrado[index].addEventListener('click', (event) => {
+    //pinta quadrado
+    const quadrado = document.getElementsByClassName('pixel');
+
+    for (let index = 0; index < quadrado.length; index += 1) {
+        quadrado[index].addEventListener('click', (event) => {
             const colorSelect = document.querySelector('.selected');
-                event.target.style.backgroundColor = colorSelect.style.backgroundColor;
+            event.target.style.backgroundColor = colorSelect.style.backgroundColor;
         })
-      }
+    }
 
-      //botao limpa
-      const clearButton = document.getElementById('clear-board');
-      clearButton.addEventListener('click', (event) => {
-        const quadrado = document.getElementsByClassName('pixel');
-          for (let index = 0; index < quadrado.length; index += 1) {
-            quadrado[index].style.background = 'rgb (255, 255, 255)';
-          }
-      })
+    //botao limpa
+
+    const clearButton = document.getElementById('clear-board');
+
+    clearButton.addEventListener('click', () => {
+        for (let index = 0; index < quadrado.length; index += 1) {
+            quadrado[index].style.backgroundColor = 'rgb(255, 255, 255)';
+            console.log(quadrado[index]);
+        }
+    })
+
 
 
 }
