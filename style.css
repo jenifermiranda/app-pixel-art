@@ -1,5 +1,13 @@
 body {
   text-align: center;
+  background-image: url(./kanagawa.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#title {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: darkblue;
 }
 
 .color {
@@ -8,7 +16,6 @@ body {
   border: solid black 1px;
   margin: 3px;
   display: inline-flex;
-
 }
 
 #button-random-color {
@@ -19,24 +26,27 @@ body {
   align-items: center;
   display: inline-flex;
   margin-bottom: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bold;
 }
 
 #clear-board {
-    width: 120px;
-    height: 30px;
-    border: solid black 1px;
-    justify-content: space-around;
-    align-items: center;
-    display: inline-flex;
-    margin-bottom: 20px;
-  }
+  width: 120px;
+  height: 30px;
+  border: solid black 1px;
+  justify-content: space-around;
+  align-items: center;
+  display: inline-flex;
+  margin-bottom: 20px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: bold;
+}
 
 #pixel-board {
   place-items: center;
   display: grid;
   grid-template-columns: repeat(5, 40px);
   justify-content: center;
-
 }
 
 .pixel {
